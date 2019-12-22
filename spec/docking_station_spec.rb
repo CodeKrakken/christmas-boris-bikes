@@ -19,7 +19,7 @@ describe DockingStation do
 
   describe '#dock' do
     it 'raises an error when docking station full' do
-      20.times { subject.dock(Bike.new) }
+      (subject.default_capacity).times { subject.dock(Bike.new) }
       expect { subject.dock(@bike) }.to raise_error 'Docking station full'
     end
   end
