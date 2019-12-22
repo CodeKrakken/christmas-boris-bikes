@@ -3,11 +3,12 @@ require 'docking_station'
 describe DockingStation do
 
   before :each do
-    @bike = subject.release_bike
+    @bike = Bike.new
   end
 
-  it 'responds to release_bike' do
-    expect(subject).to respond_to :release_bike
+  it 'releases a bike' do
+    subject.dock(@bike)
+    expect(subject.release_bike).to eq @bike
   end
 
   it 'releases a working bike' do
