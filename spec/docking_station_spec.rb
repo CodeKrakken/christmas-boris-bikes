@@ -17,8 +17,11 @@ describe DockingStation do
     end
   end
 
-  it 'releases a working bike' do
-    expect(@bike.working?).to eq(true)
+  describe '#dock' do
+    it 'raises an error when docking station full' do
+      subject.dock(@bike)
+      expect { subject.dock(@bike) }.to raise_error 'Docking station full'
+    end
   end
   
   it 'docks a bike' do
