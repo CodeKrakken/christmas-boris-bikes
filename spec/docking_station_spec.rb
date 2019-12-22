@@ -6,10 +6,6 @@ describe DockingStation do
     @bike = Bike.new
   end
 
-  it 'docks a bike' do
-    expect(subject.dock(@bike)).to eq(@bike)
-  end
-
   it 'tells you whether there is a bike' do
     subject.dock(@bike)
     expect(subject.bikes.last).to eq(@bike)
@@ -34,13 +30,24 @@ describe DockingStation do
     it 'raises an error when there are no bikes available' do
       expect { subject.release_bike }.to raise_error 'No bikes available'
     end
+
+    it 'will not release a broken bike' do
+      @bike.broken
+      subject.dock(@bike)
+      expect { subject.release_bike } .to raise_error 'No working bikes'
+    end
   end
 
   describe '#dock' do
+    it 'docks a bike' do
+      expect(subject.dock(@bike)).to eq(@bike)
+    end
+
     it 'raises an error when docking station full' do
       subject.capacity.times { subject.dock(Bike.new) }
       expect { subject.dock(@bike) }.to raise_error 'Docking station full'
     end
+
   end
 
 end
