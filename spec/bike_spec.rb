@@ -5,4 +5,8 @@ describe Bike do
     expect(subject).to respond_to :working?
   end
 
+  it 'responds to broken' do
+    expect(subject).to respond_to :broken
+  end
+
 end

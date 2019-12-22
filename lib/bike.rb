@@ -4,4 +4,8 @@ class Bike
     true
   end
 
+  def broken
+    @working = false
+  end
+
 end
