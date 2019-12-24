@@ -3,7 +3,6 @@ require 'docking_station'
 describe DockingStation do
   let(:bike) { double :bike }
 
-  
   it 'tells you whether there is a bike' do
     subject.dock(bike)
     expect(subject.bikes.last).to eq(bike)
