@@ -8,6 +8,7 @@ describe Van do
   describe '#collect' do
     let(:docking_station) { double :docking_station }
     let(:bike) { double :bike }
+    let(:repair_shop) { double :repair_shop }
 
     it 'collects a broken bike from a docking station' do
       allow(bike).to receive(:working?).and_return(false)
@@ -24,5 +25,9 @@ describe Van do
       expect { subject.collect(bike, docking_station) }.to raise_error("This bike does not need to be repaired")
     end
 
+    it 'collects a working bike from a repair shop' do
+      allow(bike).to receive(:working?).and_return(true)
+      expect(subject.collect(bike, repair_shop)).to eq(bike)
+    end
   end 
 end
