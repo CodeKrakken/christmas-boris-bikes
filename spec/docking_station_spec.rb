@@ -34,7 +34,7 @@ describe DockingStation do
       bike.broken
       subject.dock(bike)
       allow(bike).to receive(:working?).and_return(false)
-      expect { subject.release_bike } .to raise_error 'No working bikes'
+      expect { subject.release_bike } .to raise_error 'No bikes available'
     end
   end
 
