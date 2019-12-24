@@ -20,6 +20,7 @@ describe Van do
       allow(bike).to receive(:working?).and_return(true)
       allow(docking_station).to receive(:dock).and_return(bike)
       docking_station.dock(bike)
+      allow(docking_station).to receive(:class).and_return(DockingStation)
       expect { subject.collect(bike, docking_station) }.to raise_error("This bike does not need to be repaired")
     end
 

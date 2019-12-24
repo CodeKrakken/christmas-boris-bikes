@@ -6,7 +6,7 @@ class Van
   end
 
   def collect(bike, origin)
-    fail "This bike does not need to be repaired" if bike.working? # && origin.class == DockingStation
+    fail "This bike does not need to be repaired" if bike.working? && origin.class == DockingStation
     @bikes << bike
     @bikes.last
   end
