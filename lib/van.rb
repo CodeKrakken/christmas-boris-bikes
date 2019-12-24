@@ -15,4 +15,9 @@ class Van
     origin.bikes.delete(bike)
   end
 
+  def deliver(bike, destination)
+    destination.bikes.push(bike)
+    @bikes.delete(bike)
+  end
+
 end

@@ -53,5 +53,22 @@ describe Van do
       allow(docking_station.bikes).to receive(:include?).and_return(false)
       expect { subject.collect(bike, docking_station) }.to raise_error("Bike not found")
     end
-  end 
+  end
+  
+  describe '#deliver' do
+    let (:bike) { double :bike }
+    let (:docking_station) { double :docking_station }
+    let (:repair_shop) { double :repair_shop }
+
+    it 'removes a bike from its array upon delivery' do
+      allow(docking_station).to receive(:bikes)
+      allow(docking_station.bikes).to receive(:push).and_return(bike)
+      allow(repair_shop).to receive(:bikes)
+      allow(repair_shop.bikes).to receive(:include?).and_return(true)
+      allow(bike).to receive(:working?).and_return(true)
+      allow(repair_shop.bikes).to receive(:delete)
+      subject.collect(bike, repair_shop)
+      expect(subject.deliver(bike, docking_station)).to eq(bike)
+    end
+  end
 end
