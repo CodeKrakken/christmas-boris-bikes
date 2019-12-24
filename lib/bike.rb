@@ -10,6 +10,7 @@ class Bike
 
   def broken
     @working = false
+    "Bike has been reported broken"
   end
 
 end

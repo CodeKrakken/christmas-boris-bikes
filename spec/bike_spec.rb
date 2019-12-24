@@ -11,7 +11,6 @@ describe Bike do
   end
 
   it 'can be reported as broken' do
-    subject.broken
-    expect(subject.working?).to eq(false)
+    expect(subject.broken).to eq("Bike has been reported broken")
   end
 end

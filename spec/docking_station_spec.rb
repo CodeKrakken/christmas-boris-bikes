@@ -30,7 +30,7 @@ describe DockingStation do
     end
 
     it 'will not release a broken bike' do
-      allow(bike).to receive(:broken).and_return(false)
+      allow(bike).to receive(:broken).and_return("Bike has been reported broken")
       bike.broken
       subject.dock(bike)
       allow(bike).to receive(:working?).and_return(false)
