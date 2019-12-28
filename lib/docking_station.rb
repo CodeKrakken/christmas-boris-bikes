@@ -3,6 +3,7 @@ class DockingStation
 
   attr_reader :bikes
   attr_reader :capacity
+  attr_reader :broken_bikes
 
   def initialize(capacity = DEFAULT_CAPACITY)
     @capacity = capacity

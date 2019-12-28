@@ -6,7 +6,7 @@ bike.working?
 bike.broken
 bike.working?
 docking_station.dock(bike)
-docking_station.bikes.last
+docking_station
 docking_station.release_bike
 bike_2 = Bike.new
 bike_2.working?
