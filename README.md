@@ -4,5 +4,6 @@ This application provides a backend for the Santander Cycles scheme in London, a
 
 ## Setup
 
-This programme uses Ruby 2.6.5. To check your Ruby version, just enter this in your console:\n
+This programme uses Ruby 2.6.5. To check your Ruby version, just enter this in your console:
+
 `ruby -v`
