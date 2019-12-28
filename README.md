@@ -4,7 +4,7 @@ This application provides a backend for the Santander Cycles scheme in London, a
 
 ## User stories
 
-`As a person,
+```As a person,
 So that I can use a bike,
 I'd like a docking station to release a bike.
 
@@ -70,7 +70,7 @@ I'd like vans to take broken bikes from docking stations and deliver them to gar
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
-I'd like vans to collect working bikes from garages and distribute them to docking stations.`
+I'd like vans to collect working bikes from garages and distribute them to docking stations.```
 
 ## Setup
 
