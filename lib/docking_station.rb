@@ -7,23 +7,24 @@ class DockingStation
   def initialize(capacity = DEFAULT_CAPACITY)
     @capacity = capacity
     @bikes = []
+    @broken_bikes = []
   end
 
   def release_bike
-    fail 'No bikes available' if empty? || @bikes.last.working? == false
+    fail 'No bikes available' if empty?
     @bikes.pop
   end
 
   def dock(bike)
     fail 'Docking station full' if full?
-    @bikes.push(bike)
+    bike.working? ? @bikes.push(bike) : @broken_bikes.push(bike)
     @bikes.last
   end
 
   private
 
   def full?
-    @bikes.count >= DEFAULT_CAPACITY
+    (@bikes.count + @broken_bikes.count) >= DEFAULT_CAPACITY
   end
 
   def empty?
