@@ -1,4 +1,6 @@
-### Boris Bikes
+### Bikes
 
-Cycle around London for not much money courtesy of some bikes provided by Santander, NOT Boris Johnson.
-Programmed in Ruby using TDD.
+This application provides a backend for the Santander Cycles scheme in London, as instigated by former Mayor Ken Livingstone. It was programmed in Ruby using TDD as revision over Christmas 2019.
+
+## SETUP
+
