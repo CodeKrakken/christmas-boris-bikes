@@ -11,4 +11,5 @@ docking_station.release_bike
 bike_2 = Bike.new
 bike_2.working?
 docking_station.dock(bike_2)
+docking_station
 docking_station.release_bike
