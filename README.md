@@ -96,6 +96,4 @@ To install the project:
 
 Feature Test example:
 
-<img width="1280" alt="Screenshot 2019-12-28 at 14 21 30" src="https://user-images.githubusercontent.com/52076323/71545025-17321e00-297e-11ea-8baa-2161cc3ee6e3.png">
-
-
+<img width="1280" alt="Screenshot 2019-12-28 at 14 57 51" src="https://user-images.githubusercontent.com/52076323/71545436-e3a5c280-2982-11ea-9b51-09e29021bf43.png">
