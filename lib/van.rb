@@ -15,8 +15,7 @@
 
   def deliver(bike, destination)
     fail "Bike not found" unless @bikes.include?(bike)
-    destination.dock(bike) if destination.class == DockingStation
-    destination.bikes.push(bike)
+    destination.class == DockingStation ? destination.dock(bike) : destination.bikes.push(bike)
     @bikes.delete(bike)
   end
 

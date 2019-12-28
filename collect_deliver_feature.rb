@@ -19,3 +19,4 @@ van.collect(bike, garage)
 garage.repair(bike)
 van.collect(bike, garage)
 van.deliver(bike, docking_station)
+docking_station.bikes
